@@ -1,4 +1,3 @@
-import assignments from "../Database/assignments.js";
 import Database from "../Database/index.js";
 import { v4 as uuidv4 } from "uuid";
 
@@ -19,7 +18,7 @@ export function createAssignment(assignment) {
 }
 
 export function deleteAssignment(assignmentId) {
-  const { assignments } = Database.assignments;
+  const { assignments } = Database;
   Database.assignments = assignments.filter((a) => a._id !== assignmentId);
 }
 
