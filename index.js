@@ -8,6 +8,7 @@ import CourseRoutes from './Kambaz/Courses/routes.js';
 import "dotenv/config";
 import ModuleRoutes from "./Kambaz/Modules/routes.js";
 import AssignmentRoutes from './Kambaz/Assignments/routes.js';
+import EnrollmentRoutes from './Kambaz/Enrollments/routes.js';
 
 const app = express();
 
@@ -43,6 +44,7 @@ UserRoutes(app);
 CourseRoutes(app);
 ModuleRoutes(app);
 AssignmentRoutes(app);
+EnrollmentRoutes(app);
 
 app.listen(4000, () => console.log("Server running on port 4000!!"));
 
