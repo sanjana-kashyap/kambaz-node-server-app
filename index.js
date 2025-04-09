@@ -14,7 +14,7 @@ const app = express();
 
 console.log("starting up server....");
 
-app.set('trust proxy', 1);
+//app.set('trust proxy', 1);
 app.use(cors({
   credentials: true,
   origin: process.env.NETLIFY_URL || "http://localhost:5173",
@@ -31,7 +31,7 @@ if (process.env.NODE_ENV !== "development") {
   sessionOptions.cookie = {
     sameSite: "none",
     secure: true,
-    // domain: process.env.NODE_SERVER_DOMAIN,
+    domain: process.env.NODE_SERVER_DOMAIN,
   };
 }
 
