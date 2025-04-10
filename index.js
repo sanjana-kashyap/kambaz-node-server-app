@@ -14,7 +14,6 @@ const app = express();
 
 console.log("starting up server....");
 
-//app.set('trust proxy', 1);
 app.use(cors({
   credentials: true,
   origin: process.env.NETLIFY_URL || "http://localhost:5173",
@@ -47,5 +46,5 @@ ModuleRoutes(app);
 AssignmentRoutes(app);
 EnrollmentRoutes(app);
 
-app.listen(process.env.PORT, () => console.log("Server running on port 4000!!"));
+app.listen(process.env.PORT, () => console.log(`Server running on port ${process.env.PORT}!`));
 
